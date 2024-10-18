@@ -8,14 +8,14 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MdbFormsModule,FormsModule],
+  imports: [MdbFormsModule, FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   login: Login = new Login();
 
-  router = inject(Router); 
+  router = inject(Router); //equivalente ao @Autowired.... traz uma instância única do roteador para o componente
 
   autenticar() {
 
