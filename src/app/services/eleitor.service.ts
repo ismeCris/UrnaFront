@@ -7,8 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EleitorService {
-
-
   constructor() { }
 
   http = inject(HttpClient);
