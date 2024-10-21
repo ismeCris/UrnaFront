@@ -92,27 +92,31 @@ export class UrnaComponent {
   }
 
   addNumber(num : number){
-    if(this.voto.prefeito == null ){
-      if(this.inputValue.length < 2){
-        this.inputValue += num;
+    if(this.eleitor != null){
+      if(this.voto.prefeito == null ){
+        if(this.inputValue.length < 2){
+          this.inputValue += num;
+        }
+        if(this.inputValue.length == 2){
+          this.verificaPrefeito();
+        }
+      }else{
+        if(this.inputValue.length < 5){
+          this.inputValue += num;
+        }
+        if(this.inputValue.length == 5){
+          this.verificaVereador();
+        }
+  
       }
-      if(this.inputValue.length == 2){
-        this.verificaPrefeito();
-      }
-    }else{
-      if(this.inputValue.length < 5){
-        this.inputValue += num;
-      }
-      if(this.inputValue.length == 5){
-        this.verificaVereador();
-      }
-
     }
   }
 
   backspace(){
-    this.inputValue = this.inputValue.slice(0, -1);
-    this.nomeCandidato = "";
+    if(this.inputValue.length > 0){
+      this.inputValue = this.inputValue.slice(0, -1);
+      this.nomeCandidato = "";
+    }
   }
 
   verificaPrefeito(){
