@@ -8,6 +8,7 @@ import { CandidatoFormComponent } from './components/candidato/candidato-form/ca
 import { EleitorListComponent } from './components/eleitor/eleitor-list/eleitor-list.component';
 import { EleitorFormComponent } from './components/eleitor/eleitor-form/eleitor-form.component';
 import { Apuracao } from './models/apuracao';
+import { ApuracaoComponent } from './components/apuracao/apuracao.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -21,6 +22,6 @@ export const routes: Routes = [
     { path: 'eleitores', component: EleitorListComponent },
     { path: 'eleitores/new', component: EleitorFormComponent },
     { path: 'eleitores/edit/:id', component: EleitorFormComponent },
-    { path: 'apuracao', component: Apuracao}
+    { path: 'apuracao', component: ApuracaoComponent }
   ]}
 ];

@@ -4,7 +4,7 @@ export class Apuracao {
 
     totalVotos!: number;
 
-    canditatosVereador!: Candidato[];
-    canditatosPrefeito!: Candidato[];
+    candidatosVereador!: Candidato[];
+    candidatosPrefeito!: Candidato[];
 
 }

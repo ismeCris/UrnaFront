@@ -5,7 +5,7 @@ export class Candidato {
     numero!: string;
     funcao!: number; // 1 para Prefeito, 2 para Vereador
     status!: Status;
-    votosApurados?: number; 
+    votosApurados!: number;
 
     constructor(
         id: number = 0, 
@@ -14,7 +14,7 @@ export class Candidato {
         numero: string = '', 
         funcao: number = 0, 
         status: Status = Status.INATIVO, 
-        votosApurados?: number
+        votosApurados: number = 0
     ) {
         this.id = id;
         this.nome = nome;
@@ -30,3 +30,8 @@ export enum Status {
     ATIVO = 'ATIVO',
     INATIVO = 'INATIVO'
 }
+export interface Apuracao {
+    totalVotos: number;
+    candidatosPrefeito: Candidato[];
+    candidatosVereador: Candidato[];
+  }

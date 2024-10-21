@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 export class LoginComponent {
   login: Login = new Login();
 
-  router = inject(Router); //equivalente ao @Autowired.... traz uma instância única do roteador para o componente
+  router = inject(Router); 
 
   autenticar() {
 
@@ -30,8 +30,6 @@ export class LoginComponent {
         toast.onmouseleave = Swal.resumeTimer;
       }
     });
-   
-
 
     if (this.login.username == 'admin' && this.login.senha == 'admin') {
       Toast.fire({
