@@ -1,34 +1,18 @@
-<div class="container">
-  <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">
+<div class="login-container">
 
+  <div class="image-section">
+    <img src="https://i.pinimg.com/originals/97/35/82/973582d9b0e0761a1b880edb78b7f4e7.gif" alt="Ilustração de login" />
+  </div>
 
-        
-      <div class="card">
-        <div class="card-body">
-          
+  <div class="form-section">
+    <h5>Login</h5>
+    <p>seja bem vindo, realize o login para entrar.</p>
+    
+    <input type="text" placeholder="Usuario" [(ngModel)]="login.username">
+    <input type="password" placeholder="Senha" [(ngModel)]="login.senha">
+  
+    <button type="button" (click)="autenticar()">Entrar</button>
 
-            <h5 class="card-title">Entre com seu login e senha:</h5><br>
-
-            <mdb-form-control>
-                <input mdbInput type="text" name="username" class="form-control" [(ngModel)]="login.username" />
-                <label mdbLabel class="form-label" for="form1"
-                  >Usuário:</label
-                >
-              </mdb-form-control>
-              <br>
-              <mdb-form-control>
-                <input (keyup.enter)="autenticar()" mdbInput type="password" name="senha" class="form-control" [(ngModel)]="login.senha" />
-                <label mdbLabel class="form-label" for="form1"
-                  >Senha:</label
-                >
-              </mdb-form-control>
-              <br>
-            <button type="button" (click)="autenticar()" class="btn btn-primary">Logar</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-4"></div>
+    
   </div>
 </div>

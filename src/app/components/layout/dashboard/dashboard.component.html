@@ -1,1 +1,48 @@
-<p>dashboard works!</p>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Candidatos a Prefeito</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Número</th>
+                        <th>CPF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (candidato of candidatosPrefeito; track $index) {
+                        <tr>
+                            <td>{{ candidato.nome }}</td>
+                            <td>{{ candidato.numero }}</td>
+                            <td>{{ candidato.cpf }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+            <h2>Candidatos a Vereador</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Número</th>
+                        <th>CPF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (candidato of candidatosVereador; track $index) {
+                        <tr>
+                            <td>{{ candidato.nome }}</td>
+                            <td>{{ candidato.numero }}</td>
+                            <td>{{ candidato.cpf }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

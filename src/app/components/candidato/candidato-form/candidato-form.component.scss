@@ -1,0 +1,149 @@
+/* Container externo para a imagem e o formulário */
+.container-externa {
+  display: flex;
+  height: 90vh;                   /* Altura ajustada para 90% da tela */
+  justify-content: center;         /* Centraliza horizontalmente */
+  align-items: center;             /* Centraliza verticalmente */
+  padding: 30px;                   /* Afastamento do container das bordas da tela */
+  background-color: #f0f8ff;       /* Cor de fundo */
+}
+
+/* Container principal do formulário e da imagem */
+.container {
+  width: 80%;    
+  height: 85%;                  /* Limita a largura do container a 80% da tela */
+  display: flex;
+  box-shadow: none;                /* Remove qualquer sombra do container */
+  border-radius: 10px;             /* Cantos arredondados */
+  background-color: #fff;          /* Fundo branco */
+  align-items: stretch;            /* Faz as seções terem a mesma altura */
+}
+
+/* Seção da imagem */
+.image-section {
+  background-color: #e6f2fa;       /* Cor de fundo suave */
+  width: 40%;                      /* Ocupa 40% da largura */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;             /* Centraliza a imagem e o texto */
+  border-top-left-radius: 10px;    /* Borda arredondada superior esquerda */
+  border-bottom-left-radius: 10px; /* Borda arredondada inferior esquerda */
+}
+
+/* Estiliza a imagem */
+.side-image {
+  max-width: 80%;                  /* Largura máxima da imagem */
+  height: auto;                    /* Proporção da imagem */
+  margin-bottom: 20px;             /* Espaço entre a imagem e o texto */
+}
+
+/* Título da seção da imagem */
+.form-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2a4d69;
+  text-align: center;              /* Centraliza o título */
+}
+
+/* Seção do formulário */
+.form-section-right {
+  background-color: #fff;
+  width: 60%;                      /* Ocupa 60% da largura */
+  padding: 60px;
+  display: flex;
+  justify-content: center;         /* Centraliza o conteúdo */
+  align-items: center;             /* Centraliza verticalmente */
+  border-top-right-radius: 10px;   /* Borda arredondada superior direita */
+  border-bottom-right-radius: 10px; /* Borda arredondada inferior direita */
+  flex-direction: column;          /* Coloca o conteúdo em coluna */
+}
+
+/* Seção de conteúdo do formulário */
+.form-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;          /* Itens em coluna */
+  align-items: center;             /* Centraliza os itens do formulário */
+}
+
+/* Título do formulário */
+.form-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2a4d69;
+  text-align: center;              /* Centraliza o título do formulário */
+}
+
+/* Estilos para os inputs e botões */
+.mdb-form-control {
+  width: 80%;                      /* Centraliza e limita a largura */
+  margin-bottom: 15px;
+}
+
+.mdb-form-control input {
+  border-radius: 10px;
+  border: 2px solid #d0e6f6;
+  padding: 10px;
+  width: 100%;
+}
+
+.mdb-form-control label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Remove o fundo, sombra e bolinhas (radio inputs disfarçados como botões) */
+.btn-select {
+  background-color: transparent;   /* Remove o fundo */
+  color: #2a4d69;                  /* Cor do texto */
+  border: 2px solid #2a4d69;       /* Borda azul */
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  outline: none;                   /* Remove a sombra ao focar */
+  box-shadow: none;                /* Remove qualquer sombra */
+}
+
+/* Remove a bolinha de radio button */
+.btn-select input[type="radio"] {
+  display: none;                   /* Esconde o radio button */
+}
+
+.btn-select.active {
+  background-color: #2a4d69;       /* Fundo azul quando ativo */
+  color: white;
+}
+
+.btn-select:hover {
+  background-color: #2a4d69;       /* Fundo ao passar o mouse */
+  color: white;
+}
+
+/* Centraliza e limita a largura dos botões de ação */
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;                      /* Centraliza e limita a largura */
+  margin-top: 20px;
+}
+
+/* Botões de ação */
+.btn-primary {
+  background-color: #2a4d69;
+  border-color: #2a4d69; 
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.btn-secondary {
+  background-color: #d0e6f6;
+  border-color: #d0e6f6;
+  border-radius: 20px;
+  padding: 10px 20px;
+}

@@ -57,12 +57,9 @@
               "src/styles.scss"
             ],
             "scripts": [
-<<<<<<< HEAD
-              "node_modules/chart.js/dist/chart.js",
-=======
->>>>>>> bb6a1c7439e782b8cc9ecda29c6ea1eca09a1dd3
-              "node_modules/chart.js/dist/chart.js"
-            ]
+    "node_modules/chart.js/dist/chart.js"
+]
+
           },
           "configurations": {
             "production": {
