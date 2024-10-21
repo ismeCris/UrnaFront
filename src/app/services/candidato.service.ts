@@ -39,7 +39,9 @@ export class CandidatoService {
   getVereadoresAtivos(): Observable<Candidato[]> {
     return this.http.get<Candidato[]>(this.API+"/vereAtivos");
   }
-  
-  
-  
+
+  findCandidatoByNumero(numero: string): Observable<Candidato> {
+    return this.http.get<Candidato>(this.API+"/findByNumero/"+ numero);
+  }
+
 }

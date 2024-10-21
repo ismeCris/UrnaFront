@@ -16,7 +16,7 @@ export class UrnaService {
   constructor() { }
 
   votar(voto : Voto, eleitorId : number) : Observable<string> {
-    return this.http.post<string>(this.api +`/votar/${eleitorId}`, {});
+    return this.http.post<string>(this.api +`/votar/${eleitorId}`, voto, {responseType: "text" as "json"});
   }
 
   realizarApuração() : Observable<Apuracao>{

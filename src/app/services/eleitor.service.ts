@@ -18,11 +18,11 @@ export class EleitorService {
   }
 
   update(eleitor: Eleitor, id : number) : Observable<string>{
-    return this.http.put<string>(this.api+ `/updade/${id}`, eleitor, {responseType: "text" as "json"})
+    return this.http.put<string>(this.api+ `/update/${id}`, eleitor, {responseType: "text" as "json"})
   }
 
   delete(id : number) : Observable<string>{
-    return this.http.delete<string>(this.api+ `/delete/${id}`, {responseType: "text" as "json"})
+    return this.http.put<string>(this.api+ `/delete/${id}`, null, { responseType: 'text' as 'json' })
   }
 
   findAll() : Observable<Eleitor[]>{
@@ -33,5 +33,7 @@ export class EleitorService {
     return this.http.get<Eleitor>(this.api+"/findById/"+ id)
   } 
 
-
+  findByCpf(cpf: string) : Observable<Eleitor>{
+    return this.http.get<Eleitor>(this.api+"/findByCpf/"+ cpf)
+  } 
 }
