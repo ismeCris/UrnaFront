@@ -1,4 +1,39 @@
 
+
+.card-cpf{
+  top: 8vh;
+  background-color: #a3d2d5;
+  min-height: 50vh;
+}
+
+.form-label{
+  margin: 4vh;
+  color: #185b60;
+  font-size: 24px;
+  font-family:  'Lucida Sans Unicode';
+  letter-spacing: 0.5em;
+}
+
+.form-control{
+  margin-top: 4vh;
+  max-width: 25vw;
+  height: 6vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-cpf{
+  margin-top: 5vh;
+  background-color: #e3b566;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+}
+.btn-cpf:hover{
+  background-color: #e39966;
+}
+
 .card-body{
     padding: 10px;
 }
@@ -16,7 +51,7 @@
   margin-top: 10px;
 }
 
-button {
+btn-urna {
   padding: 30px;
   font-size: 18px;
   cursor: pointer;
