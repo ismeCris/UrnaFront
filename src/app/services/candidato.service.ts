@@ -20,6 +20,10 @@ export class CandidatoService {
     return this.http.get<Candidato>(this.API+"/findById/"+id);
   }
 
+  findByNumero(id: string): Observable<Candidato> {
+    return this.http.get<Candidato>(this.API+"/findByNumero/"+id);
+  }
+
   update(candidato: Candidato): Observable<string> {
     return this.http.put<string>(this.API+"/update/"+candidato.id, candidato, {responseType: 'text' as 'json'});
   }

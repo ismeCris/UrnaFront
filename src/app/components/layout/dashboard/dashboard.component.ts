@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
   selector: 'app-dashboard',
   standalone: true, 
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
 

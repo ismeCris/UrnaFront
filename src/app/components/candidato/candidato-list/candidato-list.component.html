@@ -3,16 +3,16 @@
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-body">
-          <!-- Botão para Cadastrar -->
-          <div class="mb-4">
-            <a class="btn btn-success" href="admin/candidatos/new">Cadastrar</a>
-          </div>
+        <div class="d-flex mb-4">
+          <input type="text" [(ngModel)]="searchNumero" (keyup)="searchCandidato()" placeholder="Buscar por número" />
+          <a class="btn btn-success ms-2" href="admin/candidatos/new">Cadastrar</a>
+        </div>
+        <div class="table-container"> 
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Nome</th>
-                <th scope="col">funcão</th>
+                <th scope="col">Função</th>
                 <th scope="col">Número</th>
                 <th scope="col">CPF</th>
                 <th scope="col">Status</th>
@@ -22,16 +22,14 @@
             <tbody>
               @for (candidato of lista; track $index) {
                 <tr>
-                  <td>{{ candidato.nome }}</td>
+                  <td><i class="fas fa-user icon"></i> {{ candidato.nome }}</td>
                   <td>{{ candidato.funcao === 1 ? 'Prefeito' : candidato.funcao === 2 ? 'Vereador' : 'Desconhecido' }}</td>
-
                   <td>{{ candidato.numero }}</td>
                   <td>{{ candidato.cpf }}</td>
                   <td>{{ candidato.status }}</td>
                   <td class="alinharDireita">
-                    <a class="btn btn-primary" href="admin/candidatos/edit/{{ candidato.id }}">Editar</a>
-                    <button class="btn btn-warning" (click)="deleteById(candidato)">Desativar</button>
-
+                    <a class="btn btn-editar" href="admin/candidatos/edit/{{ candidato.id }}">Editar</a>
+                    <button class="btn btn-desativar" (click)="deleteById(candidato)">Desativar</button>
                   </td>
                 </tr>
               }
