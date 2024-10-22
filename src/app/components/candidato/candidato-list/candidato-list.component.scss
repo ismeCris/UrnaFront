@@ -1,9 +1,58 @@
+.card {
+  border-radius: 8px; 
+  top: 2vh;
+  padding: 20px; 
+}
+
+.table-container {
+  max-height: 800; 
+  overflow-y: auto; 
+  position: relative; 
+  margin-top: 10px; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 0; 
+}
+
 .table th, .table td {
-    vertical-align: middle; 
-  }
-  
-  .card {
-    border-radius: 8px; 
-    top: 2vh;
-  }
-  
+  vertical-align: middle; 
+}
+
+.table th {
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+  background-color: #3498DB; 
+  color: white; 
+  padding: 12px; 
+}
+
+.btn-cadastrar {
+  background-color: #28a745; 
+  border-color: #28a745;
+  color: white; 
+  margin-right: 10px; 
+}
+
+.btn-editar {
+  background-color: #17a2b8; 
+  border-color: #17a2b8;
+  color: white; 
+}
+
+.btn-desativar {
+  background-color: #dc3545; 
+  border-color: #dc3545;
+  color: white; 
+}
+
+.input-search {
+  margin-right: 10px; 
+}
+
+.card-body {
+  padding: 0; 
+}

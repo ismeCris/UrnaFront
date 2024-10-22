@@ -1,0 +1,33 @@
+
+.navbar {
+  background-color: #7fa0c7 ; 
+}
+.navbar .nav-link {
+  color: #000000;
+
+}
+
+.navbar .nav-link:hover {
+
+  border-radius: 0%;
+  color: #000000;
+
+}
+
+.navbar-toggler {
+  background-color: #eeeded;
+}
+
+.navbar-toggler .fas.fa-bars {
+  color: #343a40;
+}
+
+.navbar-nav.ms-auto .nav-item .nav-link {
+  color: #000000;
+}
+
+.navbar-nav.ms-auto .nav-item .nav-link:hover {
+ // background-color: #e39966;
+  color: #000000;
+
+}

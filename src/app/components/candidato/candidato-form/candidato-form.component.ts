@@ -126,7 +126,7 @@ save() {
   }
 
   lidarErroSalvamento(erro: any) {
-    console.log('Erro recebido do backend:', erro); 
+    console.log('Erro recebido do backend:', erro);
 
     let mensagemErro = '';
 

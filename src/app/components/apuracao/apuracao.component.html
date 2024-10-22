@@ -1,47 +1,52 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-6">
+  <div class="row">
+    <!-- Candidatos a Prefeito -->
+    <div class="col-md-6">
+      <div class="status-card">
         <h2>Candidatos a Prefeito</h2>
         <table class="table">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Número</th>
-              <th>CPF</th>
-              <th>Votos Apurados</th> 
+              <th class="header-cell" scope="col">Nome</th>
+              <th class="header-cell" scope="col">Número</th>
+              <th class="header-cell" scope="col">CPF</th>
+              <th class="header-cell" scope="col">Votos Apurados</th> 
             </tr>
           </thead>
           <tbody>
             @for (candidato of candidatosPrefeito; track $index) {
               <tr>
-                <td>{{ candidato.nome }}</td>
+                <td><i class="fas fa-user icon"></i> {{ candidato.nome }}</td>
                 <td>{{ candidato.numero }}</td>
                 <td>{{ candidato.cpf }}</td>
-                <td>{{ candidato.votosApurados }}</td> 
+                <td>{{ candidato.votosApurados }}</td>
               </tr>
             }
           </tbody>
         </table>
       </div>
-  
-      <div class="col-md-6">
+    </div>
+
+    <!-- Candidatos a Vereador -->
+    <div class="col-md-6">
+      <div class="status-card">
         <h2>Candidatos a Vereador</h2>
         <table class="table">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Número</th>
-              <th>CPF</th>
-              <th>Votos Apurados</th> 
+              <th class="header-cell" scope="col">Nome</th>
+              <th class="header-cell" scope="col">Número</th>
+              <th class="header-cell" scope="col">CPF</th>
+              <th class="header-cell" scope="col">Votos Apurados</th> 
             </tr>
           </thead>
           <tbody>
             @for (candidato of candidatosVereador; track $index) {
               <tr>
-                <td>{{ candidato.nome }}</td>
+                <td><i class="fas fa-user icon"></i> {{ candidato.nome }}</td>
                 <td>{{ candidato.numero }}</td>
                 <td>{{ candidato.cpf }}</td>
-                <td>{{ candidato.votosApurados }}</td> 
+                <td>{{ candidato.votosApurados }}</td>
               </tr>
             }
           </tbody>
@@ -49,4 +54,4 @@
       </div>
     </div>
   </div>
-  
+</div>
