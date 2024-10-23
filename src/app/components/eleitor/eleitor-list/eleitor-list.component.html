@@ -1,12 +1,10 @@
 <div class="container">
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <br>
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <div class="right-aligned">
-                        <a href="admin/eleitores/new" class="btn btn-primary">Novo</a>
+                        <a href="admin/eleitores/new" class="btn btn-novo">Cadastrar</a>
                     </div>
                     <table class="table table-striped">
                         <thead>
@@ -25,7 +23,7 @@
                                     <td>{{eleitor.cpf}}</td>
                                     <td>{{eleitor.email}}</td>
                                     <td>{{eleitor.status}}</td>
-                                    <td>
+                                    <td class="buttons-td">
                                         <a href="admin/eleitores/edit/{{eleitor.id}}" class="btn btn-primary">Editar</a>
                                         <a (click)="deleteById(eleitor)" class="btn btn-danger">Excluir</a>
                                     </td>
@@ -36,6 +34,5 @@
                 </div>
             </div>
         </div>
-        <div class="col-2"></div>
     </div>
 </div>

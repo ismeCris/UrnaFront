@@ -1,83 +1,85 @@
 @if (eleitor == null) {
-<div class="container">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <br>
-            <div class="card">
-                <div class="card-body">
-                    <form #formCpf="ngForm">
-                        <label mdbLabel class="form-label" for="cpf">Insira seu CPF</label>
-                        <input [(ngModel)]="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required mdbInput
-                            type="text" name="cpf" class="form-control" />
-                        <br>
-                        <button [disabled]="!formCpf.valid" class="btn btn-primary"
-                            (click)="findEleitorByCpf()">Verificar</button>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-4"></div>
-    </div>
-</div>
-}@else if(eleitor.status == "INATIVO" || eleitor.status == "BLOQUEADO" || eleitor.status == "VOTOU"){
-<p>Eleitor não está autorizado a votar. STATUS: {{eleitor.status}}</p>
-} @else {
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <br>
-            <div class="card">
-                <div class="card-body">
-                    <div class="title-container left-aligned">
-                        <h5 class="title">Candidato: {{nomeCandidato}}</h5>
-                    </div>
-                    <div class="urna center-aligned">
-
-                        <form #formVotar="ngForm">
-                            <input [(ngModel)]="inputValue" type="text" class="urna-screen z-depth-1" required disabled
-                                name="candidato" />
-                            <div class="keypad">
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(1)">1</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(2)">2</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(3)">3</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(4)">4</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(5)">5</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(6)">6</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(7)">7</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(8)">8</button>
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(9)">9</button>
-
-
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary waves-effect" (click)="addNumber(0)">0</button>
-
-                                <button [disabled]="!candidatoEncontrado" type="button" data-mdb-button-init
-                                    class="btn btn-success" value="=" (click)="confirmarVoto()">Confirma</button>
-
-                                <button type="button" data-mdb-button-init class="btn btn-danger" value="back"
-                                    (click)="backspace()"><i class="fas fa-backspace"></i></button>
-                            </div>
+<div class="container container-cpf">
+    <div class="row center-aligned">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card card-cpf">
+                <div class="container">
+                    <div class="card-body">
+                        <h5 class="cpf-title">INSIRA SEU CPF</h5>
+                        <p class="cpf-text">O CPF é necessário para validar sua identidade e permitir a votação.</p>
+                        <form #formCpf="ngForm">
+                            <input [(ngModel)]="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required mdbInput
+                                type="text" name="cpf" class="form-control" />
+                            <button [disabled]="!formCpf.valid" class="btn btn-cpf"
+                                (click)="findEleitorByCpf()">Verificar</button>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-3"></div>
+    </div>
+</div>
+}@else {
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+
+            <div class="card card-urna">
+                <div class="card-body d-flex justify-content-between">
+                    <div class="urna  left-aligned">
+
+                        @if (voto.prefeito == null) {
+                        <h5 class="title">Cargo: Prefeito</h5>
+                        } @else {
+                        <h5 class="title">Cargo: Vereador</h5>
+                        }
+                        <div class="num-container d-flex justify-content-between">
+                            <h5 class="num-title">Número: </h5>
+                            <input [(ngModel)]="inputValue" type="text" class="urna-screen z-depth-1" required disabled
+                                name="candidato" />
+                        </div>
+
+                        <h5 class="title"> <i class="fas fa-user"></i>Candidato: {{nomeCandidato}}</h5>
+                    </div>
+
+                    <div class="keypad">
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(1)">1</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(2)">2</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(3)">3</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(4)">4</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(5)">5</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(6)">6</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(7)">7</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(8)">8</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(9)">9</button>
+
+                        <button [disabled]="!candidatoEncontrado" type="button" data-mdb-button-init
+                            class="btn btn-success" value="=" (click)="confirmarVoto()">Confirma</button>
+
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-urna waves-effect" (click)="addNumber(0)">0</button>
+
+                        <button type="button" data-mdb-button-init class="btn btn-danger" value="back"
+                            (click)="backspace()"><i class="fas fa-backspace"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
     </div>
 </div>
 }
