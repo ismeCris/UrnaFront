@@ -1,13 +1,21 @@
 <div class="container">
-  
   <div class="row justify-content-center">
     <div class="col-md-12">
-      <div class="card">
-        <div class="d-flex mb-4">
-          <input type="text" [(ngModel)]="searchNumero" (keyup)="searchCandidato()" placeholder="Buscar por número" />
-          <a class="btn btn-success ms-2" href="admin/candidatos/new">Cadastrar</a>
+      <div class="status-card">
+        <div class="d-flex mb-4 align-items-center">
+          <input
+            type="text"
+            class="input-search"
+            [(ngModel)]="searchNumero"
+            (keyup)="searchCandidato()"
+            placeholder="Buscar por número"
+          />
+          <a class="btn btn-success ms-auto" href="admin/candidatos/new">
+            Cadastrar
+          </a>
         </div>
-        <div class="table-container"> 
+
+        <div class="table-container">
           <table class="table">
             <thead>
               <tr>
@@ -20,6 +28,7 @@
               </tr>
             </thead>
             <tbody>
+              <!-- Loop para candidatos -->
               @for (candidato of lista; track $index) {
                 <tr>
                   <td><i class="fas fa-user icon"></i> {{ candidato.nome }}</td>

@@ -1,20 +1,37 @@
-
 .navbar {
-  background-color: #7fa0c7 ; 
+  background-color: #7fa0c7;
+  position: top; 
+  top: 0;
 }
+
+.body-content {
+  padding-top: 70px; 
+}
+
+.navbar .btn-sair {
+  background-color: #e39966;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+.navbar .btn-sair:hover {
+  background-color: #d18356; 
+}
+
 .navbar .nav-link {
   color: #000000;
-
 }
-.navbar-brand{
+
+.navbar-brand {
   color: #000000;
 }
 
 .navbar .nav-link:hover {
-
   border-radius: 0%;
   color: #000000;
-
 }
 
 .navbar-toggler {
@@ -30,7 +47,5 @@
 }
 
 .navbar-nav.ms-auto .nav-item .nav-link:hover {
- // background-color: #e39966;
   color: #000000;
-
 }

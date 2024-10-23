@@ -10,67 +10,60 @@
 .left-aligned{
     text-align: left;
 }
-
+.table td:first-child {
+  text-align: left;
+}
 body{
     background-color: #e8e8e8;
 }
 
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;  
+  margin-top: 20px; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);  
+}
 
-/* tabelas geral */
 .table {
-    width: 100%;
-    margin-top: 40px; 
-    color: #000000;
-    border-collapse: separate; 
-    border-spacing: 0 12px; 
-  }
-  
-  .status-card {
-    border: none;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); 
-    margin-bottom: 20px;
-  }
-  
-  .table th {
-    background-color: #3498DB ; 
-    color: #ffffff; 
-    text-align: center; 
-    padding: 12px;
-    font-weight: 600;
-    border-radius: 0; 
-    border: none; 
-  }
-  
-  .table td {
-    background-color: #ffffff;
-    padding: 15px 20px; 
-    border: none; 
-    vertical-align: middle; 
-    margin: 0;
-    line-height: 1.5; 
-    text-align: center; 
-    border-radius: 10px; 
-  }
-  .table td:first-child {
-    text-align: left;
-    padding-left: 20px; 
-  }
-  
-  .table th:first-child {
-    text-align: left;
-    padding-left: 20px; 
-  }
-  
-  .table tr {
-    background-color: #fff;
-    border-radius: 10px; 
-    border: none; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05); 
-    margin-bottom: 10px; 
-  }
-  
+  width: 100%;
+  margin-top: 0;
+  border-collapse: separate; 
+  border-spacing: 0 12px; 
+  color: #000000;
+}
+
+.table th {
+  background-color: #3498DB;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 0;
+  border: none;
+  position: sticky;
+  top: 0; 
+  z-index: 10;
+}
+
+.table td {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border: none;
+  vertical-align: middle;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.table tr {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
   .color-cell {
     width: 10px; 
     border-radius: 10px 0 0 10px; 
