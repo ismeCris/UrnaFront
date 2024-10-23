@@ -1,58 +1,73 @@
 .card {
   border-radius: 8px; 
-  top: 2vh;
+  top: 2vh; 
   padding: 20px; 
 }
 
 .table-container {
-  max-height: 800; 
+  max-height: 400px;
   overflow-y: auto; 
   position: relative; 
   margin-top: 10px; 
 }
 
 .table {
-  width: 100%;
+  width: 100%; 
   border-collapse: collapse; 
   margin-top: 0; 
 }
 
 .table th, .table td {
   vertical-align: middle; 
+  padding: 12px; 
 }
 
 .table th {
   position: sticky; 
   top: 0; 
-  z-index: 10; 
-  background-color: #3498DB; 
+  z-index: 10; /* Garante que o cabeçalho fique acima do conteúdo */
+  background-color: #66a0c7;
   color: white; 
-  padding: 12px; 
 }
 
 .btn-cadastrar {
-  background-color: #28a745; 
-  border-color: #28a745;
+  background-color: #a5caae; 
+  border-color: #a5caae; 
   color: white; 
   margin-right: 10px; 
+  padding: 10px 15px;
+  border-radius: 4px; 
 }
 
 .btn-editar {
-  background-color: #17a2b8; 
-  border-color: #17a2b8;
+  background-color: #a3c1d5; 
+  border-color: #a3c1d5; 
   color: white; 
+  margin-right: 12px; 
+  padding: 10px 15px; 
+  border-radius: 4px; 
 }
 
 .btn-desativar {
-  background-color: #dc3545; 
-  border-color: #dc3545;
+  background-color: #e39966; 
+  border-color: #e39966; 
   color: white; 
+  margin-right: 10px; 
+  padding: 10px 15px; 
+  border-radius: 4px; 
 }
 
 .input-search {
   margin-right: 10px; 
+  padding: 10px;
+  border: 2px solid #3498DB; 
+  border-radius: 4px;
+  width: calc(100% - 150px); 
+  font-size: 16px;
+  transition: border-color 0.3s ease; 
 }
 
-.card-body {
-  padding: 0; 
+.input-search:focus {
+  border-color: #007BFF; 
+  outline: none;
 }

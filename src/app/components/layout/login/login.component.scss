@@ -82,3 +82,8 @@
 .form-section .signup a:hover {
   text-decoration: underline;
 }
+.form-section input:focus {
+  outline: none; /* Remove o contorno padrão */
+  border: 1px solid #889de0; /* Define uma nova borda ao focar, com a cor que desejar */
+  box-shadow: 0 0 5px #a3c1d5; /* Adiciona uma leve sombra de foco opcional */
+}

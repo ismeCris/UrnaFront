@@ -1,7 +1,7 @@
 <div class="container-externa">
 
   <div class="image-section">
-    <img src="" alt="Ilustração de cadastro" class="side-image" />
+    <img src="https://i.pinimg.com/originals/ae/2d/8e/ae2d8ece4cbf1b3cd6ff81682659e4fb.gif" alt="Ilustração de cadastro" class="side-image" />
     <h2 class="form-title">Cadastro de Candidatos</h2>
   </div>
 
@@ -18,7 +18,6 @@
         <mdb-form-control class="mb-4">
           <input mdbInput type="text" id="numero" [(ngModel)]="candidato.numero" name="numero" class="form-control" required />
           <label mdbLabel class="form-label" for="numero">Número</label>
-    
         </mdb-form-control>
 
         <mdb-form-control class="mb-4">
@@ -33,16 +32,6 @@
             </label>
             <label class="btn btn-select" [class.active]="candidato.funcao === 2">
               <input type="radio" [(ngModel)]="candidato.funcao" name="funcao" [value]="2" required> Vereador
-            </label>
-          </div>
-        </div>
-
-        <!-- CORRIGIR -->
-        <div class="form-group mb-4">
-          <label>Status :  </label>
-          <div class="btn-group btn-group-toggle no-radio-buttons">
-            <label class="btn btn-select" [class.active]="candidato.status === 'ATIVO'">
-              <input type="radio" [(ngModel)]="candidato.status" name="status" [value]="'ATIVO'" required> Ativo
             </label>
           </div>
         </div>

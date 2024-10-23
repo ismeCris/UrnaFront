@@ -1,64 +1,65 @@
 .container-externa {
   display: flex;
-  height: 90vh;                  
-  justify-content: center;         
-  align-items: center;             
-  padding: 30px;                   
-  background-color: #f0f8ff;       
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 90px;  
 }
 
 .container {
-  width: 80%;    
-  height: 85%;                  
+  width: 90%;
+  height: 80%; 
   display: flex;
-  box-shadow: none;                
-  border-radius: 10px;             
-  background-color: #fff;          
-  align-items: stretch;            
+  box-shadow: none;
+  border-radius: 10px;
+  background-color: #fff;
+  align-items: stretch;
 }
 
 .image-section {
-  background-color: #e6f2fa;       
-  width: 40%;                      
-  padding: 50px;
+  background-color: #e6f2fa;
+  width: 50%; 
+  padding: 40px;  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;             
-  border-top-left-radius: 10px;    
-  border-bottom-left-radius: 10px; 
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .side-image {
-  max-width: 80%;                  
-  height: auto;                    
-  margin-bottom: 20px;             
+  max-width: 80%;  
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .form-title {
   font-size: 2.5rem;
   font-weight: bold;
   color: #2a4d69;
-  text-align: center;              
+  text-align: center;
 }
 
 .form-section-right {
   background-color: #fff;
-  width: 60%;                      
-  padding: 60px;
+  width: 50%; 
+  padding: 40px; 
   display: flex;
-  justify-content: center;         
-  align-items: center;             
-  border-top-right-radius: 10px;   
-  border-bottom-right-radius: 10px; 
-  flex-direction: column;          
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex-direction: column;
 }
 
 .form-section {
-  width: 100%;
+  width: 80%;
+  height: 100%; 
   display: flex;
-  flex-direction: column;          
-  align-items: center;             
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
 }
 
 .form-section h2 {
@@ -66,11 +67,11 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: #2a4d69;
-  text-align: center;              
+  text-align: center;
 }
 
 .mdb-form-control {
-  width: 80%;                      
+  width: 80%;
   margin-bottom: 15px;
 }
 
@@ -87,50 +88,41 @@
 }
 
 .btn-select {
-  background-color: transparent;   
-  color: #2a4d69;                  
-  border: 2px solid #2a4d69;       
-  border-radius: 20px;
+  background-color: transparent;
+  color: #2a4d69;
+  border: 2px solid #2a4d69;
   padding: 10px 20px;
-  margin-right: 10px;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
-  outline: none;                   
-  box-shadow: none;                
+  outline: none;
+  box-shadow: none;
 }
 
 .btn-select input[type="radio"] {
-  display: none;                   
+  display: none;
 }
 
 .btn-select.active {
-  background-color: #2a4d69;       
+  background-color: #2a4d69;
   color: white;
 }
 
 .btn-select:hover {
-  background-color: #2a4d69;       
+  background-color: #2a4d69;
   color: white;
 }
 
 .d-flex {
   display: flex;
   justify-content: space-between;
-  width: 80%;                      
+  width: 80%;
   margin-top: 20px;
 }
 
 .btn-primary {
   background-color: #2a4d69;
-  border-color: #2a4d69; 
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
-.btn-secondary {
-  background-color: #d0e6f6;
-  border-color: #d0e6f6;
+  border-color: #2a4d69;
   border-radius: 20px;
   padding: 10px 20px;
 }

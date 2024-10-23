@@ -36,7 +36,6 @@ export class CandidatoService {
     return this.http.put(this.API + "/delete/" + id, null, { responseType: 'text' });
 }
 
-
   getPrefeitosAtivos(): Observable<Candidato[]> {
     return this.http.get<Candidato[]>(this.API+"/prefeAtivos");
   }
