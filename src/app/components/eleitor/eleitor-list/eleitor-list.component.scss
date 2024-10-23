@@ -4,6 +4,30 @@
     flex-direction: row;
 }
 
+.btn-novo{
+    background-color: #14a44d;
+    color: #ffffff;
+    margin: 0vh 1vw 2vh 1vh;
+}
+
+.card {
+    border-radius: 8px; 
+    top: 2vh;
+    padding: 20px; 
+    padding-top: 0;
+  }
+  
+  .table-container {
+    position: relative; 
+    margin-top: 10px; 
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 0; 
+  }
+
 @media screen and (max-width : 800px) {
 
     .buttons-td{

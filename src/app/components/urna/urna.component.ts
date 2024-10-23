@@ -90,6 +90,7 @@ export class UrnaComponent {
       title: message,
     });
   }
+  
   findEleitorByCpf() {
     this.eleitorService.findByCpf(this.cpf).subscribe({
       next: (eleitor) => {

@@ -21,12 +21,26 @@ export class EleitorListComponent {
   }
 
   findAll(){
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
     this.eleitorService.findAll().subscribe({
       next: eleitores =>{
         this.lista = eleitores;
       },
       error : erro =>{
-        alert("Deu erro")
+        Toast.fire({
+          icon: "error",
+          title: erro.error
+        });
       }
     });
 
@@ -58,7 +72,7 @@ export class EleitorListComponent {
         console.log("Erro completo:", erro);
         Toast.fire({
           icon: "error",
-          title: "Erro"
+          title: erro.error
         });
       }
     })

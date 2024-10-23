@@ -1,25 +1,43 @@
-
-
 .card-cpf{
-  top: 8vh;
-  background-color: #a3d2d5;
+  top: 12vh;
+  background-color: #ffffff;
   min-height: 50vh;
 }
 
-.form-label{
+.cpf-title{
   margin: 4vh;
   color: #185b60;
   font-size: 24px;
   font-family:  'Lucida Sans Unicode';
-  letter-spacing: 0.5em;
+  letter-spacing: 0.4em;
+}
+
+.cpf-text{
+  font-family:  'Lucida Sans Unicode';
+  font-size: 16px;
+  color: #4f4f4f;
 }
 
 .form-control{
-  margin-top: 4vh;
+  margin-top: 6vh;
   max-width: 25vw;
   height: 6vh;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+.form-control:focus{
+  box-shadow: none; 
+  outline: none;    
+  border-width: 2px;
+  border-color: #e39966;
+  background-color: #f2f2f2;
+}
+.form-control:valid{
+  box-shadow: none; 
+  outline: none;    
+  border-width: 2px;
+  border-color: #e39966;
+  background-color: #f2f2f2;
 }
 
 .btn-cpf{
@@ -34,44 +52,74 @@
   background-color: #e39966;
 }
 
+.card-urna{
+  margin-top: 10vh;
+  min-height: 75vh;
+}
+
 .card-body{
     padding: 10px;
 }
 .urna {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 10px;
 }
 
 .keypad {
   display: grid;
-  grid-template-columns: repeat(3, 12vw);
+  grid-template-columns: repeat(3, 10vw);
   grid-gap: 10px;
   margin-top: 10px;
 }
 
-btn-urna {
+.btn-urna {
+  color: white;
+  background-color: #565657;
   padding: 30px;
   font-size: 18px;
   cursor: pointer;
 }
 
-.urna-screen {
-  width: 36vw;
+.num-container{
+  margin: 5vh 0vw 5vh 0vw;
+}
+
+.num-title{
   height: 12vh;
-  border: none;
-  background-color: #757575;
-  color: #fff;
+  padding: 20px 20px 20px 0px;
+  font-size: 36px;
+}
+
+.urna-screen {
+  width: 22vw;
+  height: 12vh;
+  border: 2px solid #4f4f4f;
+  border-radius: 10px;
+  background-color: #b7b7b7;
+  color: #333333;
   text-align: right;
   font-size: 4rem;
 }
 
 .title-container{
+  width: 100%;
     height: 5vh;
     padding: 1vh 0vw 0vh 4vw;
+    text-align: left;
+    font-size: 28px;
+
 }
 
 .title{
-    font-size: 28px;
+    font-size: 36px;
+}
+
+.fa-user{
+  padding: 10px;
+  background-color: #4f4f4f;
+  color: #ffffff;
+  border-radius: 200px;
+  font-size: 24px;
+  margin-right: 10px;
 }
