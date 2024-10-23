@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="right-aligned">
-                        <a href="admin/eleitores/new" class="btn btn-novo">Cadastrar</a>
+                        <a href="admin/eleitores/new" class="btn btn-novo">Cadastrar <i class="fas fa-user-plus"></i> </a>
                     </div>
                     <table class="table table-striped">
                         <thead>
@@ -13,19 +13,19 @@
                                 <th>CPF</th>
                                 <th>Email</th>
                                 <th>Status</th>
-                                <th>Ações</th>
+                                <th class="left-aligned">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             @for (eleitor of lista; track $index) {
                                     <tr>
-                                    <td>{{eleitor.nomeCompleto}}</td>
+                                    <td> <i class="fas fa-user"></i> {{eleitor.nomeCompleto}}</td>
                                     <td>{{eleitor.cpf}}</td>
                                     <td>{{eleitor.email}}</td>
                                     <td>{{eleitor.status}}</td>
                                     <td class="buttons-td">
-                                        <a href="admin/eleitores/edit/{{eleitor.id}}" class="btn btn-primary">Editar</a>
-                                        <a (click)="deleteById(eleitor)" class="btn btn-danger">Excluir</a>
+                                        <a href="admin/eleitores/edit/{{eleitor.id}}" class="btn btn-edit"><i class="fas fa-user-pen"></i></a>
+                                        <a (click)="deleteById(eleitor)" class="btn btn-disable"><i class="fas fa-user-slash"></i></a>
                                     </td>
                                 </tr>
                                 }

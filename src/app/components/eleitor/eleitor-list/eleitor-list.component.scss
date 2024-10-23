@@ -4,10 +4,42 @@
     flex-direction: row;
 }
 
+.btn-edit{
+  font-size: 16px;
+  background-color: #0f675d;
+  color: white;
+  margin: 5px;
+  padding: 8px 8px 8px 12px;
+  border-radius: 100%;
+}
+
+.btn-edit:hover{
+  background-color: #0b4d45;
+}
+
+.btn-disable{
+  font-size: 16px;
+  background-color: #cb1c1c;
+  color: white;
+  margin: 5px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 100%;
+}
+
+.btn-disable:hover{
+  background-color: #9a1f1f;
+}
+
+
 .btn-novo{
     background-color: #14a44d;
     color: #ffffff;
     margin: 0vh 1vw 2vh 1vh;
+}
+
+.fa-user-plus{
+  font-size: 14px;
+  margin-left: 5px;
 }
 
 .card {

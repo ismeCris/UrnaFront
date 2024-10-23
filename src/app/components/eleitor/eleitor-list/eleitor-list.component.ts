@@ -37,45 +37,62 @@ export class EleitorListComponent {
         this.lista = eleitores;
       },
       error : erro =>{
-        Toast.fire({
-          icon: "error",
-          title: erro.error
-        });
+        this.showErrorToast(erro.error)
       }
     });
 
   }
 
   deleteById(eleitor: Eleitor){
+    console.log(eleitor);
+    this.eleitorService.delete(eleitor.id).subscribe({
+      next: msg => {
+        this.findAll();
+        this.showSuccessToast(msg)
+      },
+      error: erro =>{
+        console.log("Erro completo:", erro);
+       this.showErrorToast(erro.error)
+      }
+    })
 
+  }
+
+  showErrorToast(message: string) {
     const Toast = Swal.mixin({
       toast: true,
-      position: "top-end",
+      position: 'top-end',
       showConfirmButton: false,
       timer: 3000,
       timerProgressBar: true,
       didOpen: (toast) => {
         toast.onmouseenter = Swal.stopTimer;
         toast.onmouseleave = Swal.resumeTimer;
-      }
+      },
     });
 
-    this.eleitorService.delete(eleitor.id).subscribe({
-      next: msg => {
-        this.findAll();
-        Toast.fire({
-          icon: "info",
-          title: "Eleitor desativado"
-        });
-      },
-      error: erro =>{
-        console.log("Erro completo:", erro);
-        Toast.fire({
-          icon: "error",
-          title: erro.error
-        });
-      }
-    })
+    Toast.fire({
+      icon: 'error',
+      title: message,
+    });
+  }
 
+  showSuccessToast(message: string) {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    });
+
+    Toast.fire({
+      icon: 'success',
+      title: message,
+    });
   }
 }
