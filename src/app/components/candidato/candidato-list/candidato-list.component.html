@@ -10,7 +10,7 @@
             (keyup)="searchCandidato()"
             placeholder="Buscar por número"
           />
-          <a class="btn btn-success ms-auto" href="admin/candidatos/new">
+          <a class="btn btn-success ms-auto" href="admin/candidatos/new"> <i class="fas fa-user-plus"></i> 
             Cadastrar
           </a>
         </div>
@@ -36,10 +36,10 @@
                   <td>{{ candidato.numero }}</td>
                   <td>{{ candidato.cpf }}</td>
                   <td>{{ candidato.status }}</td>
-                  <td class="alinharDireita">
-                    <a class="btn btn-editar" href="admin/candidatos/edit/{{ candidato.id }}">Editar</a>
-                    <button class="btn btn-desativar" (click)="deleteById(candidato)">Desativar</button>
-                  </td>
+                  <td class="buttons-td">
+                    <a href="admin/eleitores/edit/{{candidato.id}}" class="btn btn-edit"><i class="fas fa-user-pen"></i></a>
+                    <a (click)="deleteById(candidato)" class="btn btn-disable"><i class="fas fa-user-slash"></i></a>
+                </td>
                 </tr>
               }
             </tbody>
