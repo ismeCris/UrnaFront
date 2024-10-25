@@ -1,5 +1,4 @@
 <div class="container-externa">
-
   <div class="image-section">
     <img src="https://i.pinimg.com/originals/ae/2d/8e/ae2d8ece4cbf1b3cd6ff81682659e4fb.gif" alt="Ilustração de cadastro" class="side-image" />
     <h2 class="form-title">Cadastro de Candidatos</h2>
@@ -8,23 +7,24 @@
   <div class="container form-section-right">
     <div class="form-section">
       <h2>{{ tituloComponente }}</h2>
-      <form (ngSubmit)="candidato.id ? update() : save()" class="form-candidato">
-
+      
+      <form #formCandidato="ngForm" (ngSubmit)="candidato.id ? update() : save()">
+        
         <mdb-form-control class="mb-4">
-          <input mdbInput type="text" id="nome" [(ngModel)]="candidato.nome" name="nome" class="form-control" required />
+          <input mdbInput type="text" id="nome" [(ngModel)]="candidato.nome" name="nome" class="form-control" required minlength="3" />
           <label mdbLabel class="form-label" for="nome">Nome</label>
         </mdb-form-control>
 
         <mdb-form-control class="mb-4">
-          <input mdbInput type="text" id="numero" [(ngModel)]="candidato.numero" name="numero" class="form-control" required />
+          <input mdbInput type="text" id="numero" [(ngModel)]="candidato.numero" name="numero" class="form-control" required pattern="[0-9]{2,5}" minlength="2" maxlength="5" title="O número deve ter entre 2 e 5 dígitos numéricos" />
           <label mdbLabel class="form-label" for="numero">Número</label>
         </mdb-form-control>
-
+        
         <mdb-form-control class="mb-4">
-          <input mdbInput type="text" id="cpf" [(ngModel)]="candidato.cpf" name="cpf" class="form-control" required />
+          <input mdbInput type="text" id="cpf" [(ngModel)]="candidato.cpf" name="cpf" class="form-control" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF válido no formato 000.000.000-00" />
           <label mdbLabel class="form-label" for="cpf">CPF</label>
         </mdb-form-control>
-
+        
         <div class="form-group mb-4">
           <div class="btn-group btn-group-toggle no-radio-buttons">
             <label class="btn btn-select" [class.active]="candidato.funcao === 1">
@@ -38,7 +38,7 @@
 
         <div class="d-flex justify-content-between">
           <a href="admin/candidatos" class="btn btn-secondary">Cancelar</a>
-          <button mdbRipple type="submit" class="btn btn-primary">
+          <button mdbRipple type="submit" [disabled]="!formCandidato.valid" class="btn btn-primary">
             {{ candidato.id ? 'Atualizar' : 'Adicionar' }}
           </button>
         </div>
